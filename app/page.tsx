@@ -1,113 +1,147 @@
-import Image from "next/image";
+import { Lobster } from "next/font/google"
+import { Button } from "@/components/ui/button"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { Zap, Globe, Mic2, List, Check } from 'lucide-react'
+
+const lobster = Lobster({ weight: '400', subsets: ["latin"] })
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-cyan-100">
+      {/* Hero Section (full height) */}
+      <section className="h-screen flex items-center px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto text-center max-w-3xl">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 animate-fade-in-up">
+            Turn Any Webpage into a Podcast with <br/><span className={lobster.className + " text-cyan-600"}>Web Whisper</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 animate-fade-in-up animation-delay-200">
+            Listen to your favorite articles, blogs, and web content on-the-go. No more eye strain, just pure audio bliss.
+          </p>
+          <div className="flex justify-center space-x-4 animate-fade-in-up animation-delay-400">
+            <Button size="lg">
+              Add to Chrome
+            </Button>
+            <Button size="lg" variant="outline">
+              Learn More
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Main Features */}
+      <section id="features" className="pt-32 pb-40 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Main Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <Zap className="h-12 w-12 text-cyan-600 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Instant Conversion</h3>
+              <p className="text-gray-600">Convert any webpage to audio with just one click. It&apos;s that simple and fast!</p>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <Globe className="h-12 w-12 text-cyan-600 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Works Everywhere</h3>
+              <p className="text-gray-600">Compatible with all websites. Your favorite content is just a whisper away.</p>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <Mic2 className="h-12 w-12 text-cyan-600 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Natural Voice</h3>
+              <p className="text-gray-600">Enjoy high-quality, natural-sounding voices that make listening a pleasure.</p>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <List className="h-12 w-12 text-cyan-600 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Playlist Feature</h3>
+              <p className="text-gray-600">Add multiple webpages to your playlist and listen to them later, anytime.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Simple Pricing, Powerful Features</h2>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+              <div className="px-6 py-8 sm:p-10 sm:pb-6">
+                <div className="flex justify-center">
+                  <span className="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-cyan-100 text-cyan-600">
+                    Free Forever
+                  </span>
+                </div>
+                <div className="mt-4 flex justify-center text-6xl font-extrabold text-gray-900">
+                  $0
+                </div>
+                <p className="mt-5 text-lg text-center text-gray-500">
+                  Enjoy all features of Web Whisper completely free!
+                </p>
+              </div>
+              <div className="px-6 pt-6 pb-8 sm:px-10 sm:pt-10 sm:pb-10">
+                <ul className="space-y-4">
+                  {[
+                    "Unlimited webpage conversions",
+                    "High-quality natural voices",
+                    "Playlist feature",
+                    "Works on all websites",
+                    "Regular updates and improvements"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <Check className="h-6 w-6 text-green-500" />
+                      </div>
+                      <p className="ml-3 text-base text-gray-700">{feature}</p>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-10">
+                  <Button className="w-full" size="lg">
+                    Get Started Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How does Web Whisper work?</AccordionTrigger>
+              <AccordionContent>
+                Web Whisper uses advanced text-to-speech technology to convert the main content of any webpage into audio. Simply click the extension icon, and it will start reading the page to you.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Is Web Whisper really free to use?</AccordionTrigger>
+              <AccordionContent>
+                Yes, Web Whisper is completely free to use! We believe in making web content accessible to everyone, so all features are available at no cost.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Can I use Web Whisper offline?</AccordionTrigger>
+              <AccordionContent>
+                Web Whisper requires an internet connection to convert webpages to audio. However, you can save audio files for offline listening, allowing you to enjoy your content anywhere, anytime.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>How does the playlist feature work?</AccordionTrigger>
+              <AccordionContent>
+                The playlist feature allows you to add multiple webpages to a queue. You can then listen to these pages one after another, perfect for catching up on your reading list or preparing for a long commute.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+    </div>
+  )
 }
