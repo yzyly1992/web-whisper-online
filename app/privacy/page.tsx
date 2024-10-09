@@ -39,7 +39,7 @@ export default function Privacy() {
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Us</h2>
           
           <p className="text-gray-700 mb-4">
-            If you have any questions about this Privacy Policy, please contact us at infoy@webwhisper.com.
+            If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@webwhisper.online" className="text-slate-600">info@webwhisper.online</a>
           </p>
 
           <p className="text-gray-700 mt-8">

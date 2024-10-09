@@ -118,7 +118,7 @@ export default function Home() {
             <AccordionItem value="item-1">
               <AccordionTrigger>How does Web Whisper work?</AccordionTrigger>
               <AccordionContent>
-                Web Whisper uses advanced text-to-speech technology to convert the main content of any webpage into audio. Simply click the extension icon, and it will start reading the page to you.
+                Web Whisper uses browser built-in tts to convert the main content of any webpage into audio. Simply click the extension icon, and it will open up the interface to add current page to the playlist. With play control panel, you can easily manage the audios.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -130,7 +130,7 @@ export default function Home() {
             <AccordionItem value="item-3">
               <AccordionTrigger>Can I use Web Whisper offline?</AccordionTrigger>
               <AccordionContent>
-                Web Whisper requires an internet connection to convert webpages to audio. However, you can save audio files for offline listening, allowing you to enjoy your content anywhere, anytime.
+                Yes, Web Whisper doesn&apos;t requires an internet connection to convert webpages to audio. Once the webpage is added to the playlist, you can listen the content offline anytime.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">

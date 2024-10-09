@@ -11,7 +11,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Web Whisper</h3>
             <p className="text-gray-400 mb-4">Turning the web into your personal podcast since 2024.</p>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p className="text-gray-400">Email: info@webwhisper.com</p>
+            <p className="text-gray-400">Email: info@webwhisper.online</p>
 
           </div>
           <div>
