@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Zap, Globe, Mic2, List, Check } from 'lucide-react'
+import Link from "next/link"
 
 const lobster = Lobster({ weight: '400', subsets: ["latin"] })
 
@@ -24,9 +25,7 @@ export default function Home() {
             Listen to your favorite articles, blogs, and web content on-the-go. No more eye strain, just pure audio bliss.
           </p>
           <div className="flex justify-center space-x-4 animate-fade-in-up animation-delay-400">
-            <Button size="lg">
-              Add to Chrome
-            </Button>
+            <Button asChild size="lg"><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Add to Chrome</Link></Button>
             <Button size="lg" variant="outline">
               Learn More
             </Button>
@@ -100,9 +99,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-10">
-                  <Button className="w-full" size="lg">
-                    Get Started Now
-                  </Button>
+                <Button asChild size="lg" className="w-full"><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Get Started Now</Link></Button>
                 </div>
               </div>
             </div>
@@ -137,6 +134,12 @@ export default function Home() {
               <AccordionTrigger>How does the playlist feature work?</AccordionTrigger>
               <AccordionContent>
                 The playlist feature allows you to add multiple webpages to a queue. You can then listen to these pages one after another, perfect for catching up on your reading list or preparing for a long commute.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>Does Web Whisper support multiple languages?</AccordionTrigger>
+              <AccordionContent>
+                Yes, Web Whisper supports multiple languages. By default, it automatically detects the language of the webpage and uses the appropriate voice for that language. You can also manually select the voice and language you prefer.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

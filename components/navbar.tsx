@@ -26,7 +26,7 @@ export function Navbar() {
             </div>
           </div>
           <div className="hidden md:block">
-            <Button>Get Extension</Button>
+            <Button asChild><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Get Extension</Link></Button>
           </div>
           <div className="md:hidden">
             <button
@@ -56,7 +56,7 @@ export function Navbar() {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="px-2">
-              <Button className="w-full">Get Extension</Button>
+              <Button className="w-full" asChild><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Get Extension</Link></Button>
             </div>
           </div>
         </div>
