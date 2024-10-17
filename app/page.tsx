@@ -45,8 +45,8 @@ export default function Home() {
             </div>
             <div className="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
               <Globe className="h-12 w-12 text-cyan-600 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Works Everywhere</h3>
-              <p className="text-gray-600">Compatible with all websites. Your favorite content is just a whisper away.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Works Offline</h3>
+              <p className="text-gray-600">No internet? No problem. Once added to the playlist, you can listen offline.</p>
             </div>
             <div className="bg-gradient-to-br from-cyan-50 to-purple-50 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
               <Mic2 className="h-12 w-12 text-cyan-600 mb-4" />
@@ -87,7 +87,9 @@ export default function Home() {
                     "Unlimited webpage conversions",
                     "High-quality natural voices",
                     "Playlist feature",
-                    "Works on all websites",
+                    "Offline listening",
+                    "Works on most websites",
+                    "Automatic language detection",
                     "Regular updates and improvements"
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start">
