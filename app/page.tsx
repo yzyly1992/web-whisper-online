@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion"
 import { Zap, Globe, Mic2, List, Check } from 'lucide-react'
 import Link from "next/link"
+import Image from "next/image"
 
 const lobster = Lobster({ weight: '400', subsets: ["latin"] })
 
@@ -61,6 +62,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Feature Description Rows */}
+      <section className="pb-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* First Row */}
+          <div className="flex flex-col md:flex-row items-center mb-20">
+            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+              <Image
+                src="/demo-1.png"
+                alt="Easy-to-use interface"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Easy-to-Use Interface</h3>
+              <p className="text-gray-600 mb-4">
+                Web Whisper&apos;s intuitive interface makes it simple for anyone to convert web content to audio. With just a few clicks, you can transform your reading experience into a listening one.
+              </p>
+              <ul className="list-none list-inside text-gray-600">
+                <li>🔃  One-click conversion</li>
+                <li>🔠 Simple playlist management</li>
+                <li>▶️ Handy playback controls</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Second Row */}
+          <div className="flex flex-col md:flex-row-reverse items-center">
+            <div className="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+              <Image
+                src="/demo-2.png"
+                alt="Cross-device synchronization"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Smart and Robust Listen Experience</h3>
+              <p className="text-gray-600 mb-4">
+                Experience seamless, high-quality audio conversion with Web Whisper. The smart features ensure that you get the most personalized and efficient listening experience.
+              </p>
+              <ul className="list-none list-inside text-gray-600">
+                <li>🤖 Experimental built-in AI</li>
+                <li>🏳️‍🌈 Auto language detection</li>
+                <li>🏄‍♂️ Offline listening capabilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-gray-50">
