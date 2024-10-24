@@ -65,6 +65,9 @@ export default function Home() {
 
       {/* Feature Description Rows */}
       <section className="pb-20 bg-white">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Free, Fast, Lightweight</h2>
+        <p className="text-center text-gray-600 mb-12 italic"
+        >~48kB Package Size</p>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* First Row */}
           <div className="flex flex-col md:flex-row items-center mb-20">
