@@ -8,6 +8,18 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.producthunt.com',
+        port: '',
+        pathname: '/widgets/embed-image/v1/**',
+      },
+    ],
+  },
+};
 
 export default nextConfig;

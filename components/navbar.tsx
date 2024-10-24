@@ -25,8 +25,16 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:block md:flex md:flex-row md:items-center md:gap-4">
             <Button asChild><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Get Extension</Link></Button>
+            <a href="https://www.producthunt.com/posts/web-whisper?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-web&#0045;whisper" target="_blank">
+              <Image 
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=531772&theme=light" 
+                alt="Web&#0032;Whisper - Listen&#0032;to&#0032;Any&#0032;Web&#0032;Page&#0032;Like&#0032;a&#0032;Podcast | Product Hunt" 
+                width={186} 
+                height={40} 
+              />
+            </a>
           </div>
           <div className="md:hidden">
             <button
@@ -55,8 +63,16 @@ export function Navbar() {
             <Link href="/#pricing" className="text-gray-800 hover:text-cyan-600 block px-3 py-2 rounded-md text-base font-medium">Pricing</Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
-            <div className="px-2">
-              <Button className="w-full" asChild><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Get Extension</Link></Button>
+            <div className="px-2 flex flex-col gap-2">
+              <Button className="w-[186px]" asChild><Link href="https://chromewebstore.google.com/detail/web-whisper-listen-to-any/mlgfgpjchflekdfagjmjbaijickededn" target="_blank">Get Extension</Link></Button>
+              <a href="https://www.producthunt.com/posts/web-whisper?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-web&#0045;whisper" target="_blank">
+                <Image 
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=531772&theme=light" 
+                  alt="Web&#0032;Whisper - Listen&#0032;to&#0032;Any&#0032;Web&#0032;Page&#0032;Like&#0032;a&#0032;Podcast | Product Hunt" 
+                  width={186} 
+                  height={40} 
+                />
+              </a>
             </div>
           </div>
         </div>
