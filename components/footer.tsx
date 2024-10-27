@@ -1,8 +1,14 @@
+"use client"
+
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { handleSubscribeMailingList } from "@/lib/mailingList";
+import { useFormState } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 export function Footer() {
+    const [errorMessage, formAction] = useFormState(handleSubscribeMailingList, undefined);
     return (
       <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,10 +32,12 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-            <form className="flex">
-              <Input type="email" placeholder="Enter your email" className="rounded-r-none" />
-              <Button type="submit" className="rounded-l-none">Subscribe</Button>
+            <form className="flex" action={formAction}>
+              <Input type="email" placeholder="Enter your email" className="rounded-r-none text-gray-600" name="email" />
+              <SubscribeButton />
             </form>
+            {errorMessage && errorMessage.error && <p className="text-red-500 text-sm mt-2">{errorMessage.error}</p>}
+            {errorMessage && errorMessage.success && <p className="text-gray-400 text-sm mt-2">{errorMessage.success}</p>}
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
@@ -38,4 +46,11 @@ export function Footer() {
       </div>
     </footer>
     )
+}
+
+function SubscribeButton() {
+  const { pending } = useFormStatus();
+  return (
+      <Button type="submit" className="rounded-l-none" disabled={pending}>Subscribe</Button>
+  )
 }

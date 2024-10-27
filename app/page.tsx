@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { Lobster } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import {
